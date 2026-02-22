@@ -1,3 +1,7 @@
-# 2025-2026-4GPb-NMinhKhue-lok411-ntruonginsatls
+# Projet: Capteur Graphite à Crayon
 MOSH project of NGUYEN Minh Khue, VO Phuc Loc, NGUYEN Truong Gia Khanh
+
+# Tableau de matière
+## Context
+## Réalisation du projet
 
