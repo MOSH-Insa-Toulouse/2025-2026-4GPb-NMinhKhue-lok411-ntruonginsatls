@@ -1,5 +1,5 @@
 # Projet: Capteur Graphite à Crayon
-MOSH project of NGUYEN Minh Khue, VO Phuc Loc, TRUONG Nguyen Gia Khanh
+MOSH projet crée par les étudiants en 4eme année de Génie Physique: NGUYEN Minh Khue, VO Phuc Loc, TRUONG Nguyen Gia Khanh
 
 # Tableau de matière
 - [Introduction]
@@ -32,4 +32,12 @@ Dans ce projet, nous utilisons des composants électroniques et des modules dans
 ### Code Arduino
 
 ## Résultats
+
+## Conclusion
+
+## Références
+- Fiches techniques des composants (HC-05, Keyes KY-040, SSD 1306, LLC 1070, LTC1050, MCP41100)
+- Documentation Arduino
+- Tutoriels MIT App Inventor
+- Outils de simulation LTSpice et KiCad
 
