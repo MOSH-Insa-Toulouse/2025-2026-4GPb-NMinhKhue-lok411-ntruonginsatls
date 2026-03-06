@@ -1,5 +1,6 @@
 # Projet: Capteur Graphite à Crayon
-MOSH projet crée par les étudiants en 4eme année de Génie Physique: NGUYEN Minh Khue, VO Phuc Loc, TRUONG Nguyen Gia Khanh
+MOSH projet crée par les étudiants en 4eme année de Génie Physique: 
+NGUYEN Minh Khue, VO Phuc Loc, TRUONG Nguyen Gia Khanh
 
 # Tableau de matière
 - [Introduction]
