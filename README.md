@@ -22,7 +22,7 @@ Dans ce projet, nous utilisons des composants électroniques et des modules dans
 - 1 Potentiomètre numérique (MCP41100)
 - 1 Amplificateur de transimpédance (LTC1050)
 - 2 Supports IC 
-- 1 Résistance 1kom, 2 résistances 10kom, 2 résistances 100kom
+- 1 Résistance 1kΩ, 2 résistances 10kΩ, 2 résistances 100kΩ
 - 3 condensateurs 100nF, 1 condensateur 1µF
 
 ### Simulation LTSpice
