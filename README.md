@@ -9,6 +9,12 @@ NGUYEN Minh Khue, VO Phuc Loc, TRUONG Nguyen Gia Khanh
 ### Objectifs
 
 ### Livrables
+Plusieurs livrables sont contenus:
+- **Un shield PCB connecté à une carte Arduino UNO** avec differents composants.
+- **Un code Arduino** qui gère les différents composants cités précédemments (mesures de contraintes, échanges bluetooth et OLED, potentiomètre digital et boutons).
+- Fiches techniques des composants (HC-05, Keyes KY-040, SSD 1306, LLC 1070, LTC1050, MCP41100)
+- **Une application Android** (grâce aux Tutoriels MIT App Inventor) permet de connecter le PCB et le code Arduino.
+- Outils de simulation LTSpice et KiCad.
 
 ## Réalisation du projet
 
@@ -36,9 +42,5 @@ Dans ce projet, nous utilisons des composants électroniques et des modules dans
 
 ## Conclusion
 
-## Références
-- Fiches techniques des composants (HC-05, Keyes KY-040, SSD 1306, LLC 1070, LTC1050, MCP41100)
-- Documentation Arduino
-- Tutoriels MIT App Inventor
-- Outils de simulation LTSpice et KiCad
+## Contacts
 
