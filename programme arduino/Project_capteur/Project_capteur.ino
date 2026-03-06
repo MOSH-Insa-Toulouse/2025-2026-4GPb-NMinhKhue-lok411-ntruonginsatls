@@ -1,7 +1,7 @@
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
-
+//
 // ---------------- Encoder pins ----------------
 #define encoder0PinA 2   // Encoder CLK (interrupt pin)
 #define encoder0PinB 3   // Encoder DT
