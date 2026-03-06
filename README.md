@@ -7,18 +7,24 @@ MOSH projet crée par les étudiants en 4eme année de Génie Physique:
 ## Introduction
 
 ### Objectifs
+Dans le cadre de l’UF « Du capteur au banc de test en open source hardware » en 4ᵉ année de Génie Physique à l’INSA Toulouse, ce projet a pour objectif de concevoir un dispositif permettant de mesurer une déformation mécanique à l’aide d’un capteur de contrainte low-tech réalisé avec du graphite déposé au crayon sur du papier.
+
+Ce projet est basé sur le rapport scientifique "Pencil Drawn Strain Gauges and Chemiresistors on Paper", publié en 2014 par Cheng-Wei Lin*, Zhibo Zhao*, Jaemyung Kim & Jiaxing Huang. Le principe repose sur le fait que la résistance électrique du graphite varie lorsque le papier est déformé. En effet, la déformation modifie la distance entre les grains de graphite, ce qui entraîne une variation de la conductance du capteur. En mesurant cette variation de résistance, il est possible d’estimer la contrainte appliquée.
+
+L’objectif est donc de concevoir un système de mesure basé sur ce capteur simple, puis d’évaluer ses performances en les comparant à celles d’une jauge de contrainte commerciale.
 
 ### Livrables
 Plusieurs livrables sont contenus:
 - **Un shield PCB connecté à une carte Arduino UNO** avec differents composants.
-- **Un code Arduino** qui gère les différents composants cités précédemments (mesures de contraintes, échanges bluetooth et OLED, potentiomètre digital et boutons).
 - Fiches techniques des composants (HC-05, Keyes KY-040, SSD 1306, LLC 1070, LTC1050, MCP41100)
+- **Un code Arduino** qui gère les différents composants cités précédemments (mesures de résistance d'une jauge de contrainte faite en graphite, la communication avec un module Bluetooth, l'affichage sur l'écran OLED d'actions possibles et la gestion du potentiomètre digital permettant la calibration de notre capteur).
 - **Une application Android** (grâce aux Tutoriels MIT App Inventor) permet de connecter le PCB et le code Arduino.
-- Outils de simulation LTSpice et KiCad.
+- La datasheet du capteur de contrainte en graphite.
+- Les outils de simulation LTSpice et KiCad.
 
 ## Réalisation du projet
 
-### Matériels
+### Matériels nécessaires 
 Dans ce projet, nous utilisons des composants électroniques et des modules dans la salle d'instrumentation avec une carte Arduino UNO. Tous les composants sont listés ci-dessous:
 - 1 Carte Arduino UNO
 - 1 Module Bluetooth (HC-05)
