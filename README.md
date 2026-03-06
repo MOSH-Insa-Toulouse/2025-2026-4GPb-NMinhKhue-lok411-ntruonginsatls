@@ -1,9 +1,9 @@
 # Projet: Capteur Graphite à Crayon
 MOSH projet crée par les étudiants en 4eme année de Génie Physique: 
-NGUYEN Minh Khue, VO Phuc Loc, TRUONG Nguyen Gia Khanh
+**NGUYEN Minh Khue, VO Phuc Loc, TRUONG Nguyen Gia Khanh**
 
 # Tableau de matière
-- [Introduction]
+- [Introduction]_(#introduction)
 ## Introduction
 
 ### Objectifs
@@ -40,7 +40,18 @@ Dans ce projet, nous utilisons des composants électroniques et des modules dans
 
 ## Résultats
 
-## Conclusion
-
 ## Contacts
+Pour toutes les informations complémentaires: 
+### Étudiants réalisés
+- NGUYEN Minh Khue : mngu@insa-toulouse.fr
+- VO Phuc Loc : pvo@insa-toulouse.fr
+- TRUONG Nguyen Gia Khanh : ntruong@insa-toulouse.fr
+
+### Enseignants
+- Jérémie Grisolia : jeremie.grisolia@insa-toulouse.fr
+- Arnauld Biganzoli : arnauld.biganzoli@insa-toulouse.fr
+- Cathy Crouzet : crouzet@insa-toulouse.fr
+- Benjamin Mestre : benjamin.mestre@scalian.com
+
+
 
