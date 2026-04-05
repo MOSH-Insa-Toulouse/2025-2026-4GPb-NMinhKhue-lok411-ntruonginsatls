@@ -3,7 +3,7 @@ MOSH projet crée par les étudiant.e.s en 4eme année de Génie Physique:
 **NGUYEN Minh Khue, VO Phuc Loc, TRUONG Nguyen Gia Khanh**
 
 # Tableau de matière
-- [Introduction]_(#introduction)_
+- [Introduction](#introduction)
 ## Introduction
 
 ### Objectifs
@@ -23,8 +23,10 @@ Plusieurs livrables sont contenus:
 - Les outils de simulation LTSpice et KiCad.
 
 ## Réalisation du projet
+Afin de concevoir le circuit électronique, le logiciel en libre accès KICAD a été utilisé. L'ensemble des fichiers KiCad est disponible dans le dossier .[Shield_TP_Arduino](./Shield_TP_Arduino).
 
-### Concepton
+
+### Conception
 (Insérer le schéma de conception ici)
 
 ### Matériels nécessaires 
@@ -44,8 +46,13 @@ Dans ce projet, nous utilisons des composants électroniques et des modules dans
 ### Simulation LTSpice
 
 ### Réalisation du PCB
+Afin de concevoir le circuit électronique, le logiciel en libre accès KICAD a été utilisé. L'ensemble des fichiers KiCad est disponible dans le dossier
 
 ### Code Arduino
+
+Le code Arduino permet de lire les valeurs du capteur en graphite, de gérer l'affichage d'un Menu sur l'écran OLED, la communication par Bluetooth avec l'application Android et le contrôle via l'encodeur rotatif.
+
+Le code Arduino est disponible dans le dossier .[programme_arduino](./programme_arduino).
 
 ## Résultats
 
