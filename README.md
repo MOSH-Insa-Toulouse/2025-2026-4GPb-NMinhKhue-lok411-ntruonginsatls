@@ -29,7 +29,7 @@ Pour la réalisation du shield, nous avons manuellement soudé l'ensemble des mo
 
 Le Shield réalisé intègre un amplificateur de signal LTC1050 pour amplifier les faibles signaux des capteurs avec précision, un encodeur rotatif permettant de naviguer dans le menu et de modifier les valeurs de résistance via un potentiomètre, un écran OLED pour afficher clairement les menus et les informations, ainsi qu’un module Bluetooth assurant la communication sans fil avec un téléphone portable pour le contrôle et la supervision à distance du système.
 
-![Shield](/Images/Shield.png)
+![Shield](/Images/Shield.jpg)
 
 ### Matériels nécessaires 
 Dans ce projet, nous utilisons des composants électroniques et des modules dans la salle d'instrumentation avec une carte Arduino UNO. Tous les composants sont listés ci-dessous:
