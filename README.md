@@ -25,6 +25,18 @@ Ce projet est basé sur le rapport scientifique "Pencil Drawn Strain Gauges and 
 
 L’objectif est donc de concevoir un système de mesure basé sur ce capteur simple, puis d’évaluer ses performances en les comparant à celles d’une jauge de contrainte commerciale.
 
+<details>
+<summary>Utiliser cela pour expliquer en détail les étapes spécifiques pour LTSpice/KiCad</summary>
+
+- Item 1
+- Item 2
+- Item 3
+  - Subitem 3.1
+  - Subitem 3.2
+
+</details>
+
+
 ### Livrables
 Plusieurs livrables sont contenus:
 - **Un shield PCB connecté à une carte Arduino UNO** avec differents composants.
