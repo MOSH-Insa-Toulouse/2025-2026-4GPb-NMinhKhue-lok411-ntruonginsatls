@@ -51,9 +51,11 @@ Pour commencer notre PCB (Printed Circuit Board), il est nécessaire de créer l
 
 - Réalisation du schéma électronique
 Ensuite, le schéma électronique est à construire. Dans cette partie, les différentes connexions entre composants sont définies et les pins de la carte Arduino sont attribués à chacun des composants.
+![Schéma électronique réalisé sur KiCad](/Images/SchemaPCB.png)
 
 - Réalisation du PCB
 L'objectif ici était d'allouer un branchement sur les entrées d'une carte Arduino UNO à chaque module. Nous avons aussi pour but de faire le moins possible de via (pont traversant permettant de chavaucher un routage). Le circuit imprimé a été dessiné avec une attention particulière portée à la disposition des pistes pour minimiser les couplages parasites et faciliter le routage manuel.
+![Schéma du PCB](/Images/PCB.png)
 
 ### Code Arduino
 
