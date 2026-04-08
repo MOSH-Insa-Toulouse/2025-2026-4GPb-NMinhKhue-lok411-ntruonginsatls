@@ -7,11 +7,11 @@ MOSH projet crée par les étudiant.e.s en 4eme année de Génie Physique:
   - [Objectif](#objectifs)
   - [Livrables](#livrables)
 - [Réalisation du projet](#réalisation-du-projet)
-  - [Conception](#conception)
-  - [Matériels nécessaires](#matériel-necessaires)
-  - [Simulation LtSpice](#simulation-ltspice)
-  - [Réalisation du PCB](#réalisation-du-PCB)
-  - [Code Arduino](#code-arduino)
+  - [Conception](#1-conception)
+  - [Matériels nécessaires](#2-matériel-necessaires)
+  - [Simulation LtSpice](#3-simulation-ltspice)
+  - [Réalisation du PCB](#4-réalisation-du-PCB)
+  - [Code Arduino](#5-code-arduino)
 - [Résultat](#résultat)
 - [Contact](#contact)
    - [Étudiants](#étudiants)
@@ -36,14 +36,14 @@ Plusieurs livrables sont contenus:
 
 ## Réalisation du projet
 
-### Conception
+### 1. Conception
 Pour la réalisation du shield, nous avons manuellement soudé l'ensemble des modules arduino et composants électroniques (résistances, capacités, amplificateur opérationnel) au PCB imprimé.
 
 Le Shield réalisé intègre un amplificateur de signal LTC1050 pour amplifier les faibles signaux des capteurs avec précision, un encodeur rotatif permettant de naviguer dans le menu et de modifier les valeurs de résistance via un potentiomètre, un écran OLED pour afficher clairement les menus et les informations, ainsi qu’un module Bluetooth assurant la communication sans fil avec un téléphone portable pour le contrôle et la supervision à distance du système.
 
 ![Shield](/Images/Shield.jpg)
 
-### Matériels nécessaires 
+### 2. Matériels nécessaires 
 Dans ce projet, nous utilisons des composants électroniques et des modules dans la salle d'instrumentation avec une carte Arduino UNO. Tous les composants sont listés ci-dessous:
 - 1 Carte Arduino UNO
 - 1 Module Bluetooth (HC-05)
@@ -57,9 +57,9 @@ Dans ce projet, nous utilisons des composants électroniques et des modules dans
 - 1 Résistance 1kΩ, 2 résistances 10kΩ, 2 résistances 100kΩ
 - 3 condensateurs 100nF, 1 condensateur 1µF
 
-### Simulation LTSpice
+### 3. Simulation LTSpice
 
-### Réalisation du PCB
+### 4. Réalisation du PCB
 Afin de concevoir le circuit électronique, le logiciel en libre accès KICAD a été utilisé. L'ensemble des fichiers KiCad est disponible dans le dossier .[Shield_TP_Arduino](./Shield_TP_Arduino).
 
 - Réalisation des symboles et des empreints 
@@ -77,7 +77,7 @@ Image de 3D
 
 ![Schéma du PCB 3D](/Images/PCB_3D.png)
 
-### Code Arduino
+### 5. Code Arduino
 
 Le code Arduino permet de lire les valeurs du capteur en graphite, de gérer l'affichage d'un Menu sur l'écran OLED, la communication par Bluetooth avec l'application Android et le contrôle via l'encodeur rotatif.
 
