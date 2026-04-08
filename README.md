@@ -4,8 +4,8 @@ MOSH projet crée par les étudiant.e.s en 4eme année de Génie Physique:
 
 # Tableau de matière
 - [Introduction](#introduction)
-  -[Objectif](#objectifs)
-  -[Livrables](#livrables)
+  - [Objectif](#objectifs)
+  - [Livrables](#livrables)
 - [Réalisation du projet](#réalisation-du-projet)
   - [Conception](#conception)
   - [Matériels nécessaires](#matériel-necessaires)
