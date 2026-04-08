@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Component_projet_capteur")(type "KiCad")(uri "${KIPRJMOD}/Component_projet_capteur.kicad_sym")(options "")(descr ""))
+  (lib (name "LTC1050CN8")(type "KiCad")(uri "${KIPRJMOD}/LTC1050CN8.kicad_sym")(options "")(descr ""))
+)

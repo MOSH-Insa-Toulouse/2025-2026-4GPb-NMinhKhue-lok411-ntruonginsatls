@@ -1,0 +1,38 @@
+Circuit: * C:\Users\pvo\AppData\Local\TP MOSH\2025-2026-4GPb-NMinhKhue-lok411-ntruonginsatls\LTSPice\Draft2.asc
+
+Direct Newton iteration for .op point succeeded.
+.step c3=5e-07 r3=500
+.step c3=1e-06 r3=500
+.step c3=1.5e-06 r3=500
+.step c3=2e-06 r3=500
+.step c3=5e-07 r3=1000
+.step c3=1e-06 r3=1000
+.step c3=1.5e-06 r3=1000
+.step c3=2e-06 r3=1000
+.step c3=5e-07 r3=1500
+.step c3=1e-06 r3=1500
+.step c3=1.5e-06 r3=1500
+.step c3=2e-06 r3=1500
+.step c3=5e-07 r3=2000
+.step c3=1e-06 r3=2000
+.step c3=1.5e-06 r3=2000
+.step c3=2e-06 r3=2000
+
+Date: Wed Apr  8 17:51:50 2026
+Total elapsed time: 3.812 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 20735
+traniter = 20712
+tranpoints = 10357
+accept = 6668
+rejected = 3689
+matrix size = 16
+fillins = 5
+solver = Normal
+Avg thread counts: 1.2/1.4/1.4/1.2
+Matrix Compiler1: 710 bytes object code size  1.7/0.6/[0.5]
+Matrix Compiler2: 1.30 KB object code size  0.6/1.0/[0.6]
+
