@@ -1,9 +1,9 @@
 # Projet: Capteur Graphite à Crayon
-MOSH projet crée par les étudiants en 4eme année de Génie Physique: 
+MOSH projet crée par les étudiant.e.s en 4eme année de Génie Physique: 
 **NGUYEN Minh Khue, VO Phuc Loc, TRUONG Nguyen Gia Khanh**
 
 # Tableau de matière
-- [Introduction]_(#introduction)
+- [Introduction](#introduction)
 ## Introduction
 
 ### Objectifs
@@ -24,6 +24,9 @@ Plusieurs livrables sont contenus:
 
 ## Réalisation du projet
 
+### Conception
+(Insérer le schéma de conception ici)
+
 ### Matériels nécessaires 
 Dans ce projet, nous utilisons des composants électroniques et des modules dans la salle d'instrumentation avec une carte Arduino UNO. Tous les composants sont listés ci-dessous:
 - 1 Carte Arduino UNO
@@ -41,8 +44,22 @@ Dans ce projet, nous utilisons des composants électroniques et des modules dans
 ### Simulation LTSpice
 
 ### Réalisation du PCB
+Afin de concevoir le circuit électronique, le logiciel en libre accès KICAD a été utilisé. L'ensemble des fichiers KiCad est disponible dans le dossier .[Shield_TP_Arduino](./Shield_TP_Arduino).
+
+- Réalisation des symboles et des empreints 
+Pour commencer notre PCB (Printed Circuit Board), il est nécessaire de créer les symboles et les empreintes des composants qui ne sont pas disponibles dans la bibliothèque de KiCad. Nous avons réalisé les symboles du module Bluetooth, de l'encodeur rotatif, de l'écran OLED, du capteur de flexion et du capteur en graphite, afin de les ajouter au schéma de connexion. Ensuite, ces symboles ont été associés à une empreinte trouvée sur des sites de libre téléchargement.
+
+- Réalisation du schéma électronique
+Ensuite, le schéma électronique est à construire. Dans cette partie, les différentes connexions entre composants sont définies et les pins de la carte Arduino sont attribués à chacun des composants.
+
+- Réalisation du PCB
+L'objectif ici était d'allouer un branchement sur les entrées d'une carte Arduino UNO à chaque module. Nous avons aussi pour but de faire le moins possible de via (pont traversant permettant de chavaucher un routage). Le circuit imprimé a été dessiné avec une attention particulière portée à la disposition des pistes pour minimiser les couplages parasites et faciliter le routage manuel.
 
 ### Code Arduino
+
+Le code Arduino permet de lire les valeurs du capteur en graphite, de gérer l'affichage d'un Menu sur l'écran OLED, la communication par Bluetooth avec l'application Android et le contrôle via l'encodeur rotatif.
+
+Le code Arduino est disponible dans le dossier .[programme_arduino](./programme_arduino).
 
 ## Résultats
 
