@@ -1,11 +1,13 @@
 #include <Wire.h>
-#include <Adafruit_GFX.h>
+
 #include <Adafruit_SSD1306.h>
+#include <Adafruit_GFX.h>
+
 //
 // ---------------- Encoder pins ----------------
 #define encoder0PinA 2   // Encoder CLK (interrupt pin)
-#define encoder0PinB 3   // Encoder DT
-#define Switch 4         // Encoder push button
+#define encoder0PinB 4  // Encoder DT
+#define Switch 5       // Encoder push button
 
 volatile int encoder0Pos = 0; // Updated inside ISR
 
@@ -64,8 +66,8 @@ const unsigned long encStepMs = 10;
 
 // ---------------- Measurement settings ----------------
 // Measurements run only on Serial Monitor (OLED does not show measurement screen).
-const int N_SAMPLES = 20;
-const unsigned long samplePeriodMs = 20;
+const int N_SAMPLES = 50;
+const unsigned long samplePeriodMs = 50;
 
 // ---------------- Prototypes ----------------
 // Adding explicit prototypes avoids Arduino auto-prototype quirks.
@@ -125,34 +127,42 @@ float Graphite_Mesure() {
 // Run a short measurement burst and print to Serial only.
 void startMeasurementFlex() {
   Serial.println("BEGIN,FLEX");
-
+  float sum = 0;
   for (int i = 0; i < N_SAMPLES; i++) {
     float v = Flex_Mesure();
     Serial.print("FLEX,");
     Serial.print(i);
     Serial.print(",");
     if (isnan(v)) Serial.println("nan");
-    else Serial.println(v, 3);
-    delay(samplePeriodMs);
+    else {
+      Serial.println(v, 3);
+      sum = sum + v;
+      delay(samplePeriodMs);
+    }
   }
-
+  float avg = sum/N_SAMPLES;
+  Serial.println(avg);
   Serial.println("END");
 }
 
 // Run a short measurement burst and print to Serial only.
 void startMeasurementGraphite() {
   Serial.println("BEGIN,GRAPHITE");
-
+  float sum = 0;
   for (int i = 0; i < N_SAMPLES; i++) {
     float v = Graphite_Mesure();
     Serial.print("GRAPHITE,");
     Serial.print(i);
     Serial.print(",");
     if (isnan(v)) Serial.println("nan");
-    else Serial.println(v, 3);
-    delay(samplePeriodMs);
+    else {
+      Serial.println(v, 3);
+      sum = sum + v;
+      delay(samplePeriodMs);
+    }
   }
-
+  float avg = sum/N_SAMPLES;
+  Serial.println(avg);
   Serial.println("END");
 }
 
