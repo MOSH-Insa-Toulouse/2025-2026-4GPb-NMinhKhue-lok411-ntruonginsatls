@@ -25,7 +25,11 @@ Plusieurs livrables sont contenus:
 ## Réalisation du projet
 
 ### Conception
-(Insérer le schéma de conception ici)
+Pour la réalisation du shield, nous avons manuellement soudé l'ensemble des modules arduino et composants électroniques (résistances, capacités, amplificateur opérationnel) au PCB imprimé.
+
+Le Shield réalisé intègre un amplificateur de signal LTC1050 pour amplifier les faibles signaux des capteurs avec précision, un encodeur rotatif permettant de naviguer dans le menu et de modifier les valeurs de résistance via un potentiomètre, un écran OLED pour afficher clairement les menus et les informations, ainsi qu’un module Bluetooth assurant la communication sans fil avec un téléphone portable pour le contrôle et la supervision à distance du système.
+
+![Shield](/Images/Shield.jpg)
 
 ### Matériels nécessaires 
 Dans ce projet, nous utilisons des composants électroniques et des modules dans la salle d'instrumentation avec une carte Arduino UNO. Tous les composants sont listés ci-dessous:
@@ -56,6 +60,9 @@ Ensuite, le schéma électronique est à construire. Dans cette partie, les diff
 - Réalisation du PCB
 L'objectif ici était d'allouer un branchement sur les entrées d'une carte Arduino UNO à chaque module. Nous avons aussi pour but de faire le moins possible de via (pont traversant permettant de chavaucher un routage). Le circuit imprimé a été dessiné avec une attention particulière portée à la disposition des pistes pour minimiser les couplages parasites et faciliter le routage manuel.
 ![Schéma du PCB](/Images/PCB.png)
+
+Image de 3D
+![Schéma du PCB 3D](/Images/PCB_3D.png)
 
 ### Code Arduino
 
