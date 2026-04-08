@@ -48,7 +48,7 @@ Afin de concevoir le circuit électronique, le logiciel en libre accès KICAD a 
 
 - Réalisation des symboles et des empreints 
 Pour commencer notre PCB (Printed Circuit Board), il est nécessaire de créer les symboles et les empreintes des composants qui ne sont pas disponibles dans la bibliothèque de KiCad. Nous avons réalisé les symboles du module Bluetooth, de l'encodeur rotatif, de l'écran OLED, du capteur de flexion et du capteur en graphite, afin de les ajouter au schéma de connexion. Ensuite, ces symboles ont été associés à une empreinte trouvée sur des sites de libre téléchargement.
-![Schéma électronique réalisé sur KiCad](/Images/schemaPCB.png)
+![Schéma électronique réalisé sur KiCad](/Images/SchemaPCB.png)
 
 - Réalisation du schéma électronique
 Ensuite, le schéma électronique est à construire. Dans cette partie, les différentes connexions entre composants sont définies et les pins de la carte Arduino sont attribués à chacun des composants.
