@@ -102,11 +102,11 @@ fsignal < fech/2 = 7.7 kHz.
 
   - Lorsque la valeur de C4 est augmentée à 10 µF, le pic de bruit à 50 Hz est fortement réduit, ce qui indique une amélioration de l’atténuation dans les basses fréquences.
 
-![test montage augment](/Images/schema_pic_bruit.png)
+![test montage diminue](/Images/schema_pic_diminue.png)
 
   - En revanche, si on diminue la valeur de C4, le bruit augmente, montrant que la fréquence de coupure du filtre remonte et que le bruit secteur passe plus facilement.
 
-![test montage diminue](/Images/schema_pic_diminue)
+![test montage augment](/Images/schema_pic_bruit.png)
 
 - **Résultat**
 Une photo démontrant que notre circuit permet une amplification efficace du signal délivré par le capteur :
@@ -152,7 +152,7 @@ e : allongement imposé
 R : rayon de la fente (0,2 mm)
 Ce système permet de contrôler précisément la déformation du capteur en choisissant simplement un rayon de fente spécifique.
 
-![model test](/Images/model_test_bench.png)
+![model test](/Images/model_test_bench.jpg)
 
 <details>
 <summary>Explication physique derrière la capteur de graphite</summary>
