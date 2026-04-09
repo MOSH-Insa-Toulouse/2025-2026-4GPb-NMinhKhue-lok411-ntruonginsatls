@@ -72,13 +72,32 @@ La résistance R5 est placé en amont de l'AO pour le protéger contre des déch
 
 Nous avons réalisé et testé un montage sur LtSpice: 
 
+![Schéma du montage sur LtSpice](/Images/schema_ltspice.png)
 
 <details>
 <summary>Plus détail de la réalisation</summary>
 
-- Fonctionnalité de condition nominale
-- Modélisation du capteur
-- Résultat 
+- **Fonctionnalité de condition nominale**
+![montage](/Images/montage_1.png)
+Le courant d’entrée Isens varie entre 50 nA et 100 nA, ce qui entraîne une variation de la tension Vep appliquée à l’entrée non-inverseur V+ du LTC1050, entre 5 mV et 10 mV.
+
+Le gain de l’amplificateur du LTC1050 est défini par : G = 1 + R3/R2 = 101. Par conséquent, la valeur de la tension de sortie du LTC1050 varie entre 0.5 V et 1 V.
+
+![resultat](/Images/montage1.png)
+
+Au départ, le signal exprimé en décibels est de 140 dB, ce qui correspond à : 20 log(VADC / Isens).
+
+Le microcontrôleur utilisé est un Arduino UNO, basé sur un microcontrôleur AVR avec une fréquence d’échantillonnage maximale fech = 200 kHz.
+Comme la conversion analogique-numérique se fait sur 13 bits, la fréquence d’échantillonnage réelle est limitée à 15.4 kHz.
+
+D'après le théorème de Nyquist, la fréquence maximale du signal que l'on peut correctement numériser doit donc être inférieure à la moitié de cette valeur :
+fsignal < fech/2 = 7.7 kHz.
+
+- **Modélisation du capteur**
+- **Résultat**
+Une photo démontrant que notre circuit permet une amplification efficace du signal délivré par le capteur :
+![resultat final](/Images/resultat_ltspice.png)
+
 
 </details>
 
