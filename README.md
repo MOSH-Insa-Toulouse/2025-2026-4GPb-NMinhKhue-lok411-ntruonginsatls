@@ -72,7 +72,25 @@ Dans ce projet, nous utilisons des composants électroniques et des modules dans
 - 3 condensateurs 100nF, 1 condensateur 1µF
 
 ### 3. Simulation LTSpice
-Nous souhaitons mesurer la résistance de notre capteur en graphite.
+Nous souhaitons mesurer la résistance de notre capteur en graphite. Lorsque la résistance interne de notre capteur de graphite est de l'ordre du GΩ. Le courant généré lorsque nous appliquons une tension de 5V est très faible. Pour pouvoir utiliser ce signal, nous le faisons passer par un amplificateur transimpédance (ici nous choisissons LTC 1050) car il possède une capacité à accepter en entrée un courant très faible et un offset de tension bas. Ce montage est constitué d'un amplificateur opérationnel (AO) pour fournir un signal suffisamment large au convertisseur analogique-numérique (ADC) de l'Arduino UNO.
+
+En plus de l'AOP, nous ajoutons 3 filtres:
+- À l'entrée, un filtre passe bas passif composé de R1 et C1 de fréquence de coupure de 16Hz pour filtrer les bruits en courant sur le signal d'entrée.
+- Une filtre passe bas actif composé de R3 et C4 de fréquence de coupure de 1.6Hz permettane de filtre la composante de bruit à 50Hz provenant du couplage avec le réseau éléctrique.
+- En sortie, un dernier filtre composé de R6 et C2 de fréquence de 1.6kHz qui permet de retirer le bruit créé pendant le traitement i.e. bruits des alimentations, de l'horloge...
+La résistance R5 est placé en amont de l'AO pour le protéger contre des décharges électrostatiques. Pour notre simulation, nous avons placé la capacité C3 de sorte à ce qu'elle filtre le bruit de l'alimentation. Ainsi, la résistance R2 sera remplacé par une résistance variable (un potentiomètre digital) qui va nous permettre de régler le gain de notre AO en fonction de notre besoin.
+
+Nous avons réalisé et testé un montage sur LtSpice: 
+
+
+<details>
+<summary>Plus détail de la réalisation</summary>
+
+- Fonctionnalité de condition nominale
+- Modélisation du capteur
+- Résultat 
+
+</details>
 
 ### 4. Réalisation du PCB
 Afin de concevoir le circuit électronique, le logiciel en libre accès KICAD a été utilisé. L'ensemble des fichiers KiCad est disponible dans le dossier .[Shield_TP_Arduino](./Shield_TP_Arduino).
