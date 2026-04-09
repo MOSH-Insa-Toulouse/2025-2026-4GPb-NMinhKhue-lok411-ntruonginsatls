@@ -78,7 +78,9 @@ Nous avons réalisé et testé un montage sur LtSpice:
 <summary>Plus détail de la réalisation</summary>
 
 - **Fonctionnalité de condition nominale**
+
 ![montage](/Images/montage_1.png)
+
 Le courant d’entrée Isens varie entre 50 nA et 100 nA, ce qui entraîne une variation de la tension Vep appliquée à l’entrée non-inverseur V+ du LTC1050, entre 5 mV et 10 mV.
 
 Le gain de l’amplificateur du LTC1050 est défini par : G = 1 + R3/R2 = 101. Par conséquent, la valeur de la tension de sortie du LTC1050 varie entre 0.5 V et 1 V.
@@ -94,10 +96,21 @@ D'après le théorème de Nyquist, la fréquence maximale du signal que l'on peu
 fsignal < fech/2 = 7.7 kHz.
 
 - **Modélisation du capteur**
+  - Le bruit à 50 Hz, généré notamment par l'écran TFT (bruit de type secteur), est clairement observé dans le spectre du signal. Pour l’atténuer, on agit sur le condensateur C4 du filtre passe-bas.
+
+![test montage normal](/Images/schema_pic_normal.png)
+
+  - Lorsque la valeur de C4 est augmentée à 10 µF, le pic de bruit à 50 Hz est fortement réduit, ce qui indique une amélioration de l’atténuation dans les basses fréquences.
+
+![test montage augment](/Images/schema_pic_bruit.png)
+
+  - En revanche, si on diminue la valeur de C4, le bruit augmente, montrant que la fréquence de coupure du filtre remonte et que le bruit secteur passe plus facilement.
+
+![test montage diminue](/Images/schema_pic_diminue)
+
 - **Résultat**
 Une photo démontrant que notre circuit permet une amplification efficace du signal délivré par le capteur :
 ![resultat final](/Images/resultat_ltspice.png)
-
 
 </details>
 
@@ -128,6 +141,28 @@ Le code Arduino est disponible dans le dossier .[programme_arduino](./programme_
 ### 6. Application Android sur MIT App Inventor
 
 ### 7. Banc de test
+Pour valider le fonctionnement du système, nous faisons évaluer les performances de notre capteur à travers un banc de test.
+
+Un modèle 3D composé de fentes circulaires de différents rayons est utilisé pour le banc de test. En insérant le capteur dans ces fentes, une déformation est induite en fonction de son orientation (traction ou compression). La déformation est inversement proportionnelle au rayon des fentes circulaires, selon la relation suivante : ε = e / R
+
+Où :
+
+ε : déformation
+e : allongement imposé
+R : rayon de la fente (0,2 mm)
+Ce système permet de contrôler précisément la déformation du capteur en choisissant simplement un rayon de fente spécifique.
+
+![model test](/Images/model_test_bench.png)
+
+<details>
+<summary>Explication physique derrière la capteur de graphite</summary>
+
+
+<details>
+  
+**Résultat des mesures**
+
+
 
 ## Conclusion
 
