@@ -12,7 +12,9 @@ MOSH projet crée par les étudiant.e.s en 4eme année de Génie Physique:
   - [Simulation LtSpice](#3-simulation-ltspice)
   - [Réalisation du PCB](#4-réalisation-du-PCB)
   - [Code Arduino](#5-code-arduino)
-- [Résultat](#résultat)
+  - [Application Android sur MIT App Inventor](#6-application-android-sur-mit-app-inventor)
+  - [Banc de test](#7-banc-de-test)
+- [Conclusion](#conclusion)
 - [Contact](#contact)
    - [Étudiants](#étudiants)
    - [Enseignants](#enseignants)
@@ -70,6 +72,7 @@ Dans ce projet, nous utilisons des composants électroniques et des modules dans
 - 3 condensateurs 100nF, 1 condensateur 1µF
 
 ### 3. Simulation LTSpice
+Nous souhaitons mesurer la résistance de notre capteur en graphite.
 
 ### 4. Réalisation du PCB
 Afin de concevoir le circuit électronique, le logiciel en libre accès KICAD a été utilisé. L'ensemble des fichiers KiCad est disponible dans le dossier .[Shield_TP_Arduino](./Shield_TP_Arduino).
@@ -95,7 +98,11 @@ Le code Arduino permet de lire les valeurs du capteur en graphite, de gérer l'a
 
 Le code Arduino est disponible dans le dossier .[programme_arduino](./programme_arduino).
 
-## Résultats
+### 6. Application Android sur MIT App Inventor
+
+### 7. Banc de test
+
+## Conclusion
 
 ## Contacts
 Pour toutes les informations complémentaires: 
