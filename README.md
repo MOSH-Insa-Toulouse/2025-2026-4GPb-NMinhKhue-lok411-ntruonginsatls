@@ -27,7 +27,7 @@ Ce projet est basé sur le rapport scientifique "Pencil Drawn Strain Gauges and 
 
 L’objectif est donc de concevoir un système de mesure basé sur ce capteur simple, puis d’évaluer ses performances en les comparant à celles d’une jauge de contrainte commerciale.
 
-![Assemblage shield](/Image/Shield_assemblage.png)
+![Shield assemblage](/Images/Shield_assemblage.png)
 
 ### Livrables
 Plusieurs livrables sont contenus:
