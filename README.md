@@ -158,7 +158,7 @@ Ce système permet de contrôler précisément la déformation du capteur en cho
 <summary>Explication physique derrière la capteur de graphite</summary>
 
 
-<details>
+</details>
   
 **Résultat des mesures**
 
