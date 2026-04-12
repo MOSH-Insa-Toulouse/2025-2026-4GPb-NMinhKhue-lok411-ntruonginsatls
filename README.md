@@ -175,10 +175,10 @@ Par la suite, nous avons caractérisé notre capteur en graphite afin de reprodu
 Les graphiques ci-dessus montrent la variation relative de la résistance du capteur en fonction de la déformation dans deux modes : traction et compression. Des droites de régression linéaire passant par l’origine ont été ajustées, montrant que la variation relative de résistance (ΔR/R₀) évolue linéairement avec la déformation.
 
 Variation des résistances en fonction de déformation en mode traction
-![Variation de resistance de traction](/Images/variation_resistance_tension)
+![Variation de resistance de traction](/Images/variation_resistance_tension.png)
 
 Variation des résistances en fonction de déformation en mode compression
-![Variation de resistance de compression](/Images/variation_resistance_compress)
+![Variation de resistance de compression](/Images/variation_resistance_compress.png)
 
 ## Conclusion
 
