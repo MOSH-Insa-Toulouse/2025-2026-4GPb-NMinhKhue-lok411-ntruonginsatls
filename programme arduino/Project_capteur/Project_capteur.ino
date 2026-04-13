@@ -3,7 +3,15 @@
 #include <Adafruit_SSD1306.h>
 #include <Adafruit_GFX.h>
 
-//
+//----------------- BlueTooth--------------------
+#include <SoftwareSerial.h>
+#define pinBT_TXD 7
+#define pinBT_RXD 8
+SoftwareSerial BTSerial(pinBT_RXD, pinBT_TXD); //
+bool bluetoothMeasureRunning = false;
+unsigned long lastSampleMs = 0;
+
+
 // ---------------- Encoder pins ----------------
 #define encoder0PinA 2   // Encoder CLK (interrupt pin)
 #define encoder0PinB 4  // Encoder DT
@@ -81,6 +89,36 @@ float Graphite_Mesure();
 void startMeasurementFlex();
 void startMeasurementGraphite();
 void updateResistanceFromWiper();
+//----------------- Function bluetooth----------
+void handleBluetoothCommands() {
+  if (Serial.available() > 0) {
+    char cmd = Serial.read();
+
+    if (cmd == 'm') {
+      bluetoothMeasureRunning = true;
+    } 
+    else if (cmd == 's') {
+      bluetoothMeasureRunning = false;
+    }
+  }
+}
+void sendGraphiteDataBluetooth() {
+  if (!bluetoothMeasureRunning) return;
+
+  if (millis() - lastSampleMs >= samplePeriodMs) {
+    lastSampleMs = millis();
+
+    float r = Graphite_Mesure();
+
+    if (!isnan(r)) {
+      Serial.print("R ");
+      Serial.println(r, 3);
+    } else {
+      Serial.println("R nan");
+    }
+  }
+}
+
 
 // ---------------- Encoder ISR ----------------
 // Very short interrupt routine: updates encoder0Pos.
@@ -168,7 +206,7 @@ void startMeasurementGraphite() {
 
 void setup() {
   Serial.begin(9600);
-
+  BTSerial.begin(9600);
   // Encoder setup
   pinMode(encoder0PinA, INPUT_PULLUP);
   pinMode(encoder0PinB, INPUT_PULLUP);
@@ -341,4 +379,7 @@ void loop() {
   handleEncoderUI();
   handleButton();
   drawMenu(false);
+
+  handleBluetoothCommands();
+  sendGraphiteDataBluetooth();
 }
