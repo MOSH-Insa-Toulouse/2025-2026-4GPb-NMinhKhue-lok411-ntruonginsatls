@@ -156,13 +156,29 @@ Ce système permet de contrôler précisément la déformation du capteur en cho
 
 <details>
 <summary>Explication physique derrière la capteur de graphite</summary>
+Lorsque le capteur est déformé, sa résistance varie naturellement. Ce phénomène s’explique principalement par les changements de distance entre les atomes de carbone qui le composent.
+
+En traction, les atomes s’éloignent les uns des autres. Les chemins conducteurs entre les deux extrémités du capteur deviennent alors moins nombreux et moins continus. Les électrons circulent donc plus difficilement, ce qui entraîne une augmentation de la résistance.
+
+À l’inverse, en compression, les atomes se rapprochent. Les contacts entre particules sont facilités, ce qui crée davantage de chemins conducteurs. Les électrons passent alors plus facilement et la résistance diminue.
+
+On observe également que la résistance diminue lorsque la dureté du crayon augmente. Cela s’explique simplement par une plus faible proportion de carbone dans le matériau.
+
 
 
 </details>
   
 **Résultat des mesures**
 
+Par la suite, nous avons caractérisé notre capteur en graphite afin de reproduire les résultats présentés dans l’étude mentionnée ci-dessus. La tension aux bornes du capteur est mesurée puis convertie en valeur de résistance. Cette résistance est ensuite tracée en fonction de la déformation appliquée.
 
+Les graphiques ci-dessus montrent la variation relative de la résistance du capteur en fonction de la déformation dans deux modes : traction et compression. Des droites de régression linéaire passant par l’origine ont été ajustées, montrant que la variation relative de résistance (ΔR/R₀) évolue linéairement avec la déformation.
+
+Variation des résistances en fonction de déformation en mode traction
+![Variation de resistance de traction](/Images/variation_resistance_tension.png)
+
+Variation des résistances en fonction de déformation en mode compression
+![Variation de resistance de compression](/Images/variation_resistance_compress.png)
 
 ## Conclusion
 
