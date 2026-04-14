@@ -164,7 +164,7 @@ En traction, les atomes s’éloignent les uns des autres. Les chemins conducteu
 
 On observe également que la résistance diminue lorsque la dureté du crayon augmente. Cela s’explique simplement par une plus faible proportion de carbone dans le matériau.
 
-![Graphite Physiques](Schema_Graphite_Physics.png)
+![Graphite Physiques](/Images/Schema_Graphite_Physics.png)
 
 </details>
   
