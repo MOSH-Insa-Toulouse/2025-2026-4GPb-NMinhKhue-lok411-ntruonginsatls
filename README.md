@@ -164,7 +164,7 @@ En traction, les atomes s’éloignent les uns des autres. Les chemins conducteu
 
 On observe également que la résistance diminue lorsque la dureté du crayon augmente. Cela s’explique simplement par une plus faible proportion de carbone dans le matériau.
 
-
+![Graphite Physiques](Schema_Graphite_Physics.png)
 
 </details>
   
@@ -179,6 +179,11 @@ Variation des résistances en fonction de déformation en mode traction
 
 Variation des résistances en fonction de déformation en mode compression
 ![Variation de resistance de compression](/Images/variation_resistance_compress.png)
+
+**Remarque**
+Le capteur en graphite n’est pas très fiable, car les valeurs de résistance changent beaucoup d’une mesure à l’autre, même quand on répète la même manipulation. Cela signifie que les résultats ne sont pas stables et qu’il est difficile de faire confiance aux mesures obtenues. Cette instabilité peut venir de plusieurs facteurs. Par exemple, le papier support peut se plier ou s’abîmer légèrement, et le dépôt de graphite peut se fissurer ou se déplacer. À l’intérieur du capteur, le courant passe grâce au contact entre de petites particules de graphite. Si ces contacts changent après chaque déformation, même un peu, la résistance peut varier fortement.
+
+En comparaison, un capteur industriel comme un flex sensor est conçu pour être plus robuste. Sa structure interne est mieux contrôlée, ce qui permet d’obtenir des mesures plus stables et répétables. Les résultats changent donc beaucoup moins entre plusieurs essais, ce qui le rend plus fiable dans des applications pratiques.
 
 ## Conclusion
 
