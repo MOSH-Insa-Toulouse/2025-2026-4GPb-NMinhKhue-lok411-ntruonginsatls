@@ -139,7 +139,16 @@ Le code Arduino permet de lire les valeurs du capteur en graphite, de gérer l'a
 Le code Arduino est disponible dans le dossier .[programme_arduino](./programme_arduino).
 
 ### 6. Application Android sur MIT App Inventor
+Cette application permet de communiquer avec le système de mesure via Bluetooth et d’afficher les valeurs de résistance des capteurs.
 ![Application MIT](/Images/app_screenshot.png)
+Lorsque la connexion Bluetooth est réussie, le bouton Connected devient vert, ce qui indique que la liaison est établie.
+
+L’application propose deux modes de mesure :
+
+Measure Graphite : mesure la résistance du capteur graphite ;
+Measure Flex Sensor : mesure la résistance du capteur flex en fonction du temps.
+Les valeurs mesurées sont affichées sur le graphique au centre de l’écran. À la fin de la mesure, les données sont regroupées, la valeur moyenne de la résistance est calculée, puis affichée en bas de l’interface.
+
 ### 7. Banc de test
 Pour valider le fonctionnement du système, nous faisons évaluer les performances de notre capteur à travers un banc de test.
 
