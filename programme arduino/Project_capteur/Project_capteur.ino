@@ -5,13 +5,12 @@
 
 //----------------- BlueTooth--------------------
 #include <SoftwareSerial.h>
-#define pinBT_TXD 7
-#define pinBT_RXD 8
+#define pinBT_TXD 8
+#define pinBT_RXD 7
 SoftwareSerial BTSerial(pinBT_RXD, pinBT_TXD); //
-bool bluetoothMeasureRunning = false;
+bool bluetoothMeasureGraphite = false;
+bool bluetoothMeasureFlex = false;
 unsigned long lastSampleMs = 0;
-
-
 // ---------------- Encoder pins ----------------
 #define encoder0PinA 2   // Encoder CLK (interrupt pin)
 #define encoder0PinB 4  // Encoder DT
@@ -91,35 +90,57 @@ void startMeasurementGraphite();
 void updateResistanceFromWiper();
 //----------------- Function bluetooth----------
 void handleBluetoothCommands() {
-  if (Serial.available() > 0) {
-    char cmd = Serial.read();
-
+  if (BTSerial.available() > 0) {
+    char cmd = BTSerial.read();
+    Serial.println(cmd);
     if (cmd == 'm') {
-      bluetoothMeasureRunning = true;
+      bluetoothMeasureGraphite = true;
+    } 
+    if (cmd == 'f') {
+      bluetoothMeasureFlex = true;
     } 
     else if (cmd == 's') {
-      bluetoothMeasureRunning = false;
+      bluetoothMeasureGraphite = false;
+      bluetoothMeasureFlex = false;
     }
   }
+  //else  Serial.println("is not connected");
 }
-void sendGraphiteDataBluetooth() {
-  if (!bluetoothMeasureRunning) return;
 
-  if (millis() - lastSampleMs >= samplePeriodMs) {
+void sendGraphiteDataBluetooth() {
+  if (!bluetoothMeasureGraphite) return;
+
+  if (millis() - lastSampleMs >= 100) {
     lastSampleMs = millis();
 
     float r = Graphite_Mesure();
 
     if (!isnan(r)) {
-      Serial.print("R ");
-      Serial.println(r, 3);
+      BTSerial.println(r, 3);
+      Serial.println(r,3);
+
     } else {
-      Serial.println("R nan");
+      BTSerial.println(0);
     }
   }
 }
+void sendFlexDataBluetooth() {
+  if (!bluetoothMeasureFlex) return;
 
+  if (millis() - lastSampleMs >= 100) {
+    lastSampleMs = millis();
 
+    float r = Flex_Mesure();
+
+    if (!isnan(r)) {
+      BTSerial.println(r, 3);
+      Serial.println(r,3);
+
+    } else {
+      BTSerial.println(0);
+    }
+  }
+}
 // ---------------- Encoder ISR ----------------
 // Very short interrupt routine: updates encoder0Pos.
 void doEncoder() {
@@ -382,4 +403,6 @@ void loop() {
 
   handleBluetoothCommands();
   sendGraphiteDataBluetooth();
+  sendFlexDataBluetooth();
+  delay(100);
 }
