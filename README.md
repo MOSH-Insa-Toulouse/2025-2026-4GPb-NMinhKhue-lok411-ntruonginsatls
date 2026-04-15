@@ -139,7 +139,7 @@ Le code Arduino permet de lire les valeurs du capteur en graphite, de gérer l'a
 Le code Arduino est disponible dans le dossier .[programme_arduino](./programme_arduino).
 
 ### 6. Application Android sur MIT App Inventor
-
+![Application MIT](/Images/app_screenshot.png)
 ### 7. Banc de test
 Pour valider le fonctionnement du système, nous faisons évaluer les performances de notre capteur à travers un banc de test.
 
