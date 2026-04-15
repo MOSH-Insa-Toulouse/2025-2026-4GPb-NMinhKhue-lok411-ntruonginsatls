@@ -152,13 +152,14 @@ Les valeurs mesurées sont affichées sur le graphique au centre de l’écran. 
 ### 7. Banc de test
 Pour valider le fonctionnement du système, nous faisons évaluer les performances de notre capteur à travers un banc de test.
 
-Un modèle 3D composé de fentes circulaires de différents rayons est utilisé pour le banc de test. En insérant le capteur dans ces fentes, une déformation est induite en fonction de son orientation (traction ou compression). La déformation est inversement proportionnelle au rayon des fentes circulaires, selon la relation suivante : ε = e / R
+Un modèle 3D composé de fentes circulaires de différents rayons est utilisé pour le banc de test. En insérant le capteur dans ces fentes, une déformation est induite en fonction de son orientation (traction ou compression). La déformation est inversement proportionnelle au rayon des fentes circulaires, selon la relation suivante : 
+ε = e / R
 
 Où :
-
 ε : déformation
 e : allongement imposé
 R : rayon de la fente (0,2 mm)
+
 Ce système permet de contrôler précisément la déformation du capteur en choisissant simplement un rayon de fente spécifique.
 
 ![model test](/Images/model_test_bench.jpg)
