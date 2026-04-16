@@ -197,6 +197,12 @@ En comparaison, un capteur industriel comme un flex sensor est conçu pour être
 
 ## Conclusion
 
+Dans ce travail, nous avons fabriqué un capteur de déformation en graphite sur du papier et étudié comment sa résistance change lorsqu’on le déforme.
+
+Les résultats montrent que la résistance varie bien avec la déformation, ce qui confirme le principe du capteur. Cependant, les valeurs mesurées ne sont pas stables et changent d’une mesure à l’autre. Cela est probablement dû à la structure du graphite, qui n’est pas uniforme, ainsi qu’à la qualité des contacts et au support en papier qui peut se déformer.
+
+Ainsi, même si ce capteur est simple et peu coûteux, il reste peu fiable dans sa forme actuelle. Il serait donc difficile de l’utiliser en industrie sans améliorer sa fabrication et sa stabilité.
+
 ## Contacts
 Pour toutes les informations complémentaires: 
 ### Étudiants réalisés
