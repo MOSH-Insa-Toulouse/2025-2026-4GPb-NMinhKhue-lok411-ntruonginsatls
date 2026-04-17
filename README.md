@@ -140,7 +140,9 @@ Le code Arduino est disponible dans le dossier .[programme_arduino](./programme_
 
 ### 6. Application Android sur MIT App Inventor
 Cette application permet de communiquer avec le système de mesure via Bluetooth et d’afficher les valeurs de résistance des capteurs.
+
 ![Application MIT](/Images/app_screenshot.png)
+
 Lorsque la connexion Bluetooth est réussie, le bouton Connected devient vert, ce qui indique que la liaison est établie.
 
 L’application propose deux modes de mesure :
