@@ -155,7 +155,7 @@ Les valeurs mesurées sont affichées sur le graphique au centre de l’écran. 
 Pour valider le fonctionnement du système, nous faisons évaluer les performances de notre capteur à travers un banc de test.
 
 Un modèle 3D composé de fentes circulaires de différents rayons est utilisé pour le banc de test. En insérant le capteur dans ces fentes, une déformation est induite en fonction de son orientation (traction ou compression). La déformation est inversement proportionnelle au rayon des fentes circulaires, selon la relation suivante : 
-ε = e / R
+ε = e / 2R
 
 Où :
 ε : déformation
