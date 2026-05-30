@@ -30,6 +30,8 @@ Le premier objectif est donc de concevoir un système qui nous permet de faire u
 ### 2. Conception
 Pour regrouper plusieurs fonctions, cela vaut mieux que nous réalisons un shield Arduino. Nous pouvons contrôler les mesures soit manuellement avec un encoder rotatif via un écran OLED, soit à distance via un module Bluetooth et une application Android. Toutes ces idées sont synthétisé dans la figure ci-dessous.
 
+Les détails sont décrits dans la partie de la réalisation.
+
 (apres) nous avons manuellement soudé l'ensemble des modules arduino et composants électroniques (résistances, capacités, amplificateur opérationnel) au PCB imprimé.
 
 (apres) Le Shield réalisé intègre un amplificateur de signal LTC1050 pour amplifier les faibles signaux des capteurs avec précision, un encodeur rotatif permettant de naviguer dans le menu et de modifier les valeurs de résistance via un potentiomètre, un écran OLED pour afficher clairement les menus et les informations, ainsi qu’un module Bluetooth assurant la communication sans fil avec un téléphone portable pour le contrôle et la supervision à distance du système.
@@ -63,21 +65,26 @@ Plusieurs livrables sont contenus dans notre repositoire :
 
 ## Réalisation du projet
 
-### 1. Schémas et Simulation LTSpice
+### 1. Schémas
+La réalisation doit tout d'abord commencer par des schémas électriques tels que le Wiring diagram et le Connection diagram.
+
+### a. Wiring diagram et Simulation LTspice
+Ce diagramme a pour but de savoir comment on peut connecter le capteur à l'Arduino afin que les signaux des mesures soient captées par l'Arduino.
+
+![Schéma du montage sur LtSpice](/Images/schema_ltspice.png)
+
 Nous souhaitons mesurer la résistance de notre capteur en graphite. Lorsque la résistance interne de notre capteur de graphite est de l'ordre du GΩ. Le courant généré lorsque nous appliquons une tension de 5V est très faible. Pour pouvoir utiliser ce signal, nous le faisons passer par un amplificateur transimpédance (ici nous choisissons LTC 1050) car il possède une capacité à accepter en entrée un courant très faible et un offset de tension bas. Ce montage est constitué d'un amplificateur opérationnel (AO) pour fournir un signal suffisamment large au convertisseur analogique-numérique (ADC) de l'Arduino UNO.
 
 En plus de l'AOP, nous ajoutons 3 filtres:
 - À l'entrée, un filtre passe bas passif composé de R1 et C1 de fréquence de coupure de 16Hz pour filtrer les bruits en courant sur le signal d'entrée.
 - Une filtre passe bas actif composé de R3 et C4 de fréquence de coupure de 1.6Hz permettane de filtre la composante de bruit à 50Hz provenant du couplage avec le réseau éléctrique.
-- En sortie, un dernier filtre composé de R6 et C2 de fréquence de 1.6kHz qui permet de retirer le bruit créé pendant le traitement i.e. bruits des alimentations, de l'horloge...
+- En sortie, un dernier filtre composé de R6 et C2 de fréquence de 1.6kHz qui permet de retirer le bruit créé pendant le traitement i.e. bruits des alimentations, de l'horloge, etc.
+
 La résistance R5 est placé en amont de l'AO pour le protéger contre des décharges électrostatiques. Pour notre simulation, nous avons placé la capacité C3 de sorte à ce qu'elle filtre le bruit de l'alimentation. Ainsi, la résistance R2 sera remplacé par une résistance variable (un potentiomètre digital) qui va nous permettre de régler le gain de notre AO en fonction de notre besoin.
 
-Nous avons réalisé et testé un montage sur LtSpice: 
-
-![Schéma du montage sur LtSpice](/Images/schema_ltspice.png)
-
+Une fois dessiné le Wiring diagram, nous avons vérifié ses comportements et les valeurs de ses composants électriques (résistances, condensateurs,e tc.) grâce aux simulations du logiciel LTspice. (voir l'onglet caché ci-dessous)
 <details>
-<summary>Plus détail de la réalisation</summary>
+<summary><strong>Simulation LTspice</strong></summary>
 
 - **Fonctionnalité de condition nominale**
 
@@ -116,15 +123,20 @@ Une photo démontrant que notre circuit permet une amplification efficace du sig
 
 </details>
 
-### 4. Réalisation du PCB
-Afin de concevoir le circuit électronique, le logiciel en libre accès KICAD a été utilisé. L'ensemble des fichiers KiCad est disponible dans le dossier .[Shield_TP_Arduino](./Shield_TP_Arduino).
+### b. Connection diagram et KiCad
+Après le Wiring diagram, nous avons dessiné le diagramme des connexions afin de déterminer les connexions entre les broches des différents composants. Nous l'avons réalisé avec le logiciel KiCad car ce logiciel nous aiderait les étapes après.
+
+![Schéma électronique réalisé sur KiCad](/Images/SchemaPCB.png)
+
+.Pour ce faire......
+L'ensemble des fichiers KiCad est disponible dans le dossier .[Shield_TP_Arduino](./Shield_TP_Arduino).
 
 - Réalisation des symboles et des empreints 
 Pour commencer notre PCB (Printed Circuit Board), il est nécessaire de créer les symboles et les empreintes des composants qui ne sont pas disponibles dans la bibliothèque de KiCad. Nous avons réalisé les symboles du module Bluetooth, de l'encodeur rotatif, de l'écran OLED, du capteur de flexion et du capteur en graphite, afin de les ajouter au schéma de connexion. Ensuite, ces symboles ont été associés à une empreinte trouvée sur des sites de libre téléchargement.
 
 - Réalisation du schéma électronique
 Ensuite, le schéma électronique est à construire. Dans cette partie, les différentes connexions entre composants sont définies et les pins de la carte Arduino sont attribués à chacun des composants.
-![Schéma électronique réalisé sur KiCad](/Images/SchemaPCB.png)
+
 
 - Réalisation du PCB
 L'objectif ici était d'allouer un branchement sur les entrées d'une carte Arduino UNO à chaque module. Nous avons aussi pour but de faire le moins possible de via (pont traversant permettant de chavaucher un routage). Le circuit imprimé a été dessiné avec une attention particulière portée à la disposition des pistes pour minimiser les couplages parasites et faciliter le routage manuel.
