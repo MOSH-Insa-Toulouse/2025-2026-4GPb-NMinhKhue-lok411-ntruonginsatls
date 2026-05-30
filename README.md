@@ -21,11 +21,9 @@ MOSH projet crée par les étudiant.e.s en 4eme année de Génie Physique:
 ## Introduction
 
 ### Objectifs
-Dans le cadre de l’UF « Du capteur au banc de test en open source hardware » en 4ᵉ année de Génie Physique à l’INSA Toulouse, ce projet a pour objectif de concevoir un dispositif permettant de mesurer une déformation mécanique à l’aide d’un capteur de contrainte low-tech réalisé avec du graphite déposé au crayon sur du papier.
+Le projet est dans le cadre de l’UF « Du capteur au banc de test en open source hardware » en 4ᵉ année de Génie Physique à l’INSA Toulouse. Il est inspiré du rapport scientifique "Pencil Drawn Strain Gauges and Chemiresistors on Paper", publié en 2014 par Cheng-Wei Lin*, Zhibo Zhao*, Jaemyung Kim & Jiaxing Huang dans lequel les auteurs ont proposé un nouveau type de jauge de contrainte basé sur graphite. Le principe repose sur le fait que la résistance électrique du graphite varie lorsque le papier est déformé. En effet, la déformation modifie la distance entre les grains de graphite, ce qui entraîne une variation de la conductance du capteur. En mesurant cette variation de résistance, il est possible d’estimer la contrainte appliquée.
 
-Ce projet est basé sur le rapport scientifique "Pencil Drawn Strain Gauges and Chemiresistors on Paper", publié en 2014 par Cheng-Wei Lin*, Zhibo Zhao*, Jaemyung Kim & Jiaxing Huang. Le principe repose sur le fait que la résistance électrique du graphite varie lorsque le papier est déformé. En effet, la déformation modifie la distance entre les grains de graphite, ce qui entraîne une variation de la conductance du capteur. En mesurant cette variation de résistance, il est possible d’estimer la contrainte appliquée.
-
-L’objectif est donc de concevoir un système de mesure basé sur ce capteur simple, puis d’évaluer ses performances en les comparant à celles d’une jauge de contrainte commerciale.
+L’objectif est donc de concevoir un système de mesure pour ce capteur simple, puis d’évaluer ses performances en les comparant à celles d’une jauge de contrainte commerciale et d'évaluer son industriabilité.
 
 ![Shield assemblage](/Images/Shield_assemblage.png)
 
