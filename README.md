@@ -39,14 +39,16 @@ Plusieurs livrables sont contenus:
 ## Réalisation du projet
 
 ### 1. Conception
-Pour la réalisation du shield, nous avons manuellement soudé l'ensemble des modules arduino et composants électroniques (résistances, capacités, amplificateur opérationnel) au PCB imprimé.
+Pour regrouper plusieurs fonctions, cela vaut mieux que nous réalisons un shield Arduino. Nous pouvons contrôler les mesures soit manuellement avec un encoder rotatif via un écran OLED, soit à distance via un module Bluetooth et une application Android. Toutes ces idées sont synthétisé dans la figure ci-dessous.
 
-Le Shield réalisé intègre un amplificateur de signal LTC1050 pour amplifier les faibles signaux des capteurs avec précision, un encodeur rotatif permettant de naviguer dans le menu et de modifier les valeurs de résistance via un potentiomètre, un écran OLED pour afficher clairement les menus et les informations, ainsi qu’un module Bluetooth assurant la communication sans fil avec un téléphone portable pour le contrôle et la supervision à distance du système.
+(apres) nous avons manuellement soudé l'ensemble des modules arduino et composants électroniques (résistances, capacités, amplificateur opérationnel) au PCB imprimé.
 
-![Shield](/Images/Shield.jpg)
+(apres) Le Shield réalisé intègre un amplificateur de signal LTC1050 pour amplifier les faibles signaux des capteurs avec précision, un encodeur rotatif permettant de naviguer dans le menu et de modifier les valeurs de résistance via un potentiomètre, un écran OLED pour afficher clairement les menus et les informations, ainsi qu’un module Bluetooth assurant la communication sans fil avec un téléphone portable pour le contrôle et la supervision à distance du système.
+
+![Shield](/Images/conception_image.png)
 
 ### 2. Matériels nécessaires 
-Dans ce projet, nous utilisons des composants électroniques et des modules dans la salle d'instrumentation avec une carte Arduino UNO. Tous les composants sont listés ci-dessous:
+Avec la conception, nous avons décidé que ces composants listés ci-dessous sont suffisants, tout est disponible dans la salle d'instrumentation :
 - 1 Carte Arduino UNO
 - 1 Module Bluetooth (HC-05)
 - 1 Encoder rotatif (Keyes KY-040)
