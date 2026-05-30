@@ -25,7 +25,8 @@ Le projet est dans le cadre de l’UF « Du capteur au banc de test en open sour
 
 Le premier objectif est donc de concevoir un système qui nous permet de faire un banc de test en mesurant les capteurs simples à graphite pour les comparer avec les capteurs commerciales. De plus, le système doit être contrôlable. Le deuximème objectif est d'évaluer l'industriabilité de ce nouveau type de capteur à partir des mesures.
 
-![Shield assemblage](/Images/Shield_assemblage.png)
+ ![Système](/Images/system_image.png)
+(apres) ![Shield assemblage](/Images/Shield_assemblage.png)
 
 ### Livrables
 Plusieurs livrables sont contenus:
