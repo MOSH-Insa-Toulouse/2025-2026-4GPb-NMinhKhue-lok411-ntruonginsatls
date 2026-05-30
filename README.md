@@ -20,26 +20,14 @@ MOSH projet crée par les étudiant.e.s en 4eme année de Génie Physique:
    - [Enseignants](#enseignants)
 ## Introduction
 
-### Objectifs
+### 1. Objectifs
 Le projet est dans le cadre de l’UF « Du capteur au banc de test en open source hardware » en 4ᵉ année de Génie Physique à l’INSA Toulouse. Il est inspiré du rapport scientifique "Pencil Drawn Strain Gauges and Chemiresistors on Paper", publié en 2014 par Cheng-Wei Lin*, Zhibo Zhao*, Jaemyung Kim & Jiaxing Huang dans lequel les auteurs ont proposé un nouveau type de jauge de contrainte basé sur graphite. Le principe repose sur le fait que la résistance électrique du graphite varie lorsque le papier est déformé. En effet, la déformation modifie la distance entre les grains de graphite, ce qui entraîne une variation de la conductance du capteur. En mesurant cette variation de résistance, il est possible d’estimer la contrainte appliquée.
 
 Le premier objectif est donc de concevoir un système qui nous permet de faire un banc de test en mesurant les capteurs simples à graphite pour les comparer avec les capteurs commerciales. De plus, le système doit être contrôlable. Le deuximème objectif est d'évaluer l'industriabilité de ce nouveau type de capteur à partir des mesures.
 
  ![Système](/Images/system_image.png)
-(apres) ![Shield assemblage](/Images/Shield_assemblage.png)
 
-### Livrables
-Plusieurs livrables sont contenus:
-- **Un shield PCB connecté à une carte Arduino UNO** avec differents composants.
-- Fiches techniques des composants (HC-05, Keyes KY-040, SSD 1306, LLC 1070, LTC1050, MCP41100)
-- **Un code Arduino** qui gère les différents composants cités précédemments (mesures de résistance d'une jauge de contrainte faite en graphite, la communication avec un module Bluetooth, l'affichage sur l'écran OLED d'actions possibles et la gestion du potentiomètre digital permettant la calibration de notre capteur).
-- **Une application Android** (grâce aux Tutoriels MIT App Inventor) permet de connecter le PCB et le code Arduino.
-- La datasheet du capteur de contrainte en graphite.
-- Les outils de simulation LTSpice et KiCad.
-
-## Réalisation du projet
-
-### 1. Conception
+### 2. Conception
 Pour regrouper plusieurs fonctions, cela vaut mieux que nous réalisons un shield Arduino. Nous pouvons contrôler les mesures soit manuellement avec un encoder rotatif via un écran OLED, soit à distance via un module Bluetooth et une application Android. Toutes ces idées sont synthétisé dans la figure ci-dessous.
 
 (apres) nous avons manuellement soudé l'ensemble des modules arduino et composants électroniques (résistances, capacités, amplificateur opérationnel) au PCB imprimé.
@@ -48,7 +36,7 @@ Pour regrouper plusieurs fonctions, cela vaut mieux que nous réalisons un shiel
 
 ![Shield](/Images/conception_image.png)
 
-### 2. Matériels nécessaires 
+### 3. Matériels nécessaires 
 Avec la conception, nous avons décidé que ces composants listés ci-dessous sont suffisants, tout est disponible dans la salle d'instrumentation :
 - 1 Carte Arduino UNO
 - 1 Module Bluetooth (HC-05)
@@ -62,7 +50,20 @@ Avec la conception, nous avons décidé que ces composants listés ci-dessous so
 - 1 Résistance 1kΩ, 2 résistances 10kΩ, 2 résistances 100kΩ
 - 3 condensateurs 100nF, 1 condensateur 1µF
 
-### 3. Simulation LTSpice
+### 4. Livrables
+Plusieurs livrables sont contenus dans notre repositoire :
+- **Un shield PCB connecté à une carte Arduino UNO** avec differents composants.
+- Fiches techniques des composants (HC-05, Keyes KY-040, SSD 1306, LLC 1070, LTC1050, MCP41100)
+- **Un code Arduino** qui gère les différents composants cités précédemments (mesures de résistance d'une jauge de contrainte faite en graphite, la communication avec un module Bluetooth, l'affichage sur l'écran OLED d'actions possibles et la gestion du potentiomètre digital permettant la calibration de notre capteur).
+- **Une application Android** (grâce aux Tutoriels MIT App Inventor) permet de connecter le PCB et le code Arduino.
+- La datasheet du capteur de contrainte en graphite.
+- Les fichiers de simulation LTSpice et KiCad.
+  
+![Shield assemblage](/Images/Shield_assemblage.png)
+
+## Réalisation du projet
+
+### 1. Schémas et Simulation LTSpice
 Nous souhaitons mesurer la résistance de notre capteur en graphite. Lorsque la résistance interne de notre capteur de graphite est de l'ordre du GΩ. Le courant généré lorsque nous appliquons une tension de 5V est très faible. Pour pouvoir utiliser ce signal, nous le faisons passer par un amplificateur transimpédance (ici nous choisissons LTC 1050) car il possède une capacité à accepter en entrée un courant très faible et un offset de tension bas. Ce montage est constitué d'un amplificateur opérationnel (AO) pour fournir un signal suffisamment large au convertisseur analogique-numérique (ADC) de l'Arduino UNO.
 
 En plus de l'AOP, nous ajoutons 3 filtres:
