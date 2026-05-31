@@ -1,27 +1,25 @@
 # Projet: Capteur Graphite à Crayon
-MOSH projet crée par les étudiant.e.s en 4ème année de Génie Physique: 
+MOSH projet crée par les étudiant.es en 4ème année de Génie Physique: 
 **NGUYEN Minh Khue, VO Phuc Loc, TRUONG Nguyen Gia Khanh**
 
 # Tableau de matière
 - [Introduction](#introduction)
   - [Objectifs](#1-objectifs)
   - [Conception](#2-conception)
-  - [Matériels nécessaires](#2-matériel-necessaires)
-  - [Livrables](#livrables)
+  - [Matériels nécessaires](#3-matériels-nécessaires)
+  - [Livrables](#4-livrables)
 - [Réalisation du projet](#réalisation-du-projet)
-  - [Schémas](#3-simulation-ltspice)
-    - [Wiring diagram et Simulation LTspice]
-    - [Connection diagram et KiCad]
-  - [Software]
-    - [Code Arduino](#5-code-arduino)
-    - [Application Android sur MIT App Inventor](#6-application-android-sur-mit-app-inventor)
-  - [Banc de test](#7-banc-de-test)
-    - Principe
-    - Résultats
+  - [Schémas](#1-schémas)
+    - [Wiring diagram et Simulation LTspice](#11-wiring-diagram-et-simulation-ltspice)
+    - [Connection diagram et KiCad](#12-connection-diagram-et-kicad)
+  - [Software](#2-software)
+    - [Code Arduino](#21-code-arduino)
+    - [Application Android sur MIT App Inventor](#22-application-android-sur-mit-app-inventor)
+  - [Banc de test](#3-banc-de-test)
+    - [Principe](#31-principe)
+    - [Résultats](#32-résultats)
 - [Conclusion](#conclusion)
-- [Contact](#contact)
-   - [Étudiants](#étudiants)
-   - [Enseignants](#enseignants)
+- [Contacts](#contacts)
 ## Introduction
 
 ### 1. Objectifs
@@ -206,7 +204,7 @@ On observe également que la résistance diminue lorsque la dureté du crayon au
 
 </details>
   
-#### 3.2. Résultat des mesures
+#### 3.2. Résultats
 
 Par la suite, nous avons caractérisé notre capteur en graphite afin de reproduire les résultats présentés dans l’étude mentionnée ci-dessus. La tension aux bornes du capteur est mesurée puis convertie en valeur de résistance. Cette résistance est ensuite tracée en fonction de la déformation appliquée.
 
@@ -233,12 +231,12 @@ Ainsi, même si ce capteur est simple et peu coûteux, il reste peu exacte dans 
 
 ## Contacts
 Pour toutes les informations complémentaires: 
-### Étudiant.e.s réalisés :
+### Étudiant.es réalisé.es :
 - NGUYEN Minh Khue : mngu@insa-toulouse.fr
 - VO Phuc Loc : pvo@insa-toulouse.fr
 - TRUONG Nguyen Gia Khanh : ntruong@insa-toulouse.fr
 
-### Enseignants :
+### Enseignant.es :
 - Jérémie Grisolia : jeremie.grisolia@insa-toulouse.fr
 - Arnauld Biganzoli : arnauld.biganzoli@insa-toulouse.fr
 - Cathy Crouzet : crouzet@insa-toulouse.fr
