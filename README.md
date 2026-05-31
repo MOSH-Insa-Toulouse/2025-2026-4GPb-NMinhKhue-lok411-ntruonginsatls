@@ -60,8 +60,6 @@ Plusieurs livrables sont contenus dans notre repositoire :
 - **Une application Android** (grâce aux Tutoriels MIT App Inventor) permet de connecter le PCB et le code Arduino.
 - La datasheet du capteur de contrainte en graphite.
 - Les fichiers de simulation LTSpice et KiCad.
-  
-![Shield assemblage](/Images/Shield_assemblage.png)
 
 ## Réalisation du projet
 
@@ -130,33 +128,38 @@ Après le Wiring diagram, nous avons dessiné le diagramme des connexions afin d
 
 Nous vous expliquons les réalisations sur KiCad :
 
-- Réalisation des symboles et des empreints 
+- Réalisation des symboles et des empreints :
 Pour commencer notre PCB (Printed Circuit Board), il est nécessaire de créer les symboles et les empreintes des composants qui ne sont pas disponibles dans la bibliothèque de KiCad. Nous avons réalisé les symboles du module Bluetooth, de l'encodeur rotatif, de l'écran OLED, du capteur de flexion et du capteur en graphite, afin de les ajouter au schéma de connexion. Ensuite, ces symboles ont été associés à une empreinte trouvée sur des sites de libre téléchargement.
 
-- Réalisation du schéma électronique
+- Réalisation du schéma électronique (Connection diagram) :
 Ensuite, le schéma électronique est à construire. Dans cette partie, les différentes connexions entre composants sont définies et les pins de la carte Arduino sont attribués à chacun des composants.
 
 
-- Réalisation du PCB
+- Réalisation du routage :
 L'objectif ici était d'allouer un branchement sur les entrées d'une carte Arduino UNO à chaque module. Nous avons aussi pour but de faire le moins possible de via (pont traversant permettant de chavaucher un routage). Le circuit imprimé a été dessiné avec une attention particulière portée à la disposition des pistes pour minimiser les couplages parasites et faciliter le routage manuel.
 ![Schéma du PCB](/Images/PCB.png)
 
-Image de 3D
+L'ensemble des fichiers KiCad est disponible dans le dossier .[Shield_TP_Arduino](./Shield_TP_Arduino_par_KiCad).
+
+### 1.3. Résultat
+L'image de 3D du PCB :
 
 ![Schéma du PCB 3D](/Images/PCB_3D.png)
 
-L'ensemble des fichiers KiCad est disponible dans le dossier [Shield_TP_Arduino](./Shield_TP_Arduino_par_KiCad).
+Le PCB physique :
+
+![Shield assemblage](/Images/Shield_assemblage.png)
 
 ### 2. Software
 
-Nous avons fait le software une fois le hardware est fini
+Nous avons passé à la partie de software une fois celle de hardware est finie.
 
 ### 2.1. Code Arduino
 Le code Arduino permet de lire les valeurs du capteur en graphite, de gérer l'affichage d'un Menu sur l'écran OLED, la communication par Bluetooth avec l'application Android et le contrôle via l'encodeur rotatif.
 
 Le code Arduino est disponible dans le dossier .[programme_arduino](./programme_arduino).
 
-### 6. Application Android sur MIT App Inventor
+### 2.2. Application Android sur MIT App Inventor
 Cette application permet de communiquer avec le système de mesure via Bluetooth et d’afficher les valeurs de résistance des capteurs.
 
 ![Application MIT](/Images/app_screenshot.png)
@@ -168,7 +171,7 @@ L’application propose deux modes de mesure :
 - Measure Flex Sensor : mesure la résistance du capteur flex en fonction du temps.
 Les valeurs mesurées sont affichées sur le graphique au centre de l’écran. À la fin de la mesure, les données sont regroupées, la valeur moyenne de la résistance est calculée, puis affichée en bas de l’interface.
 
-### 7. Banc de test
+### 3. Banc de test
 Pour valider le fonctionnement du système, nous faisons évaluer les performances de notre capteur à travers un banc de test.
 
 Un modèle 3D composé de fentes circulaires de différents rayons est utilisé pour le banc de test. En insérant le capteur dans ces fentes, une déformation est induite en fonction de son orientation (traction ou compression). La déformation est inversement proportionnelle au rayon des fentes circulaires, selon la relation suivante : 
