@@ -66,7 +66,7 @@ Plusieurs livrables sont contenus dans notre repositoire :
 ### 1. Schémas
 La réalisation doit tout d'abord commencer par des schémas électriques tels que le Wiring diagram et le Connection diagram.
 
-### 1.1. Wiring diagram et Simulation LTspice
+#### 1.1. Wiring diagram et Simulation LTspice
 Ce diagramme a pour but de savoir comment on peut connecter le capteur à l'Arduino afin que les signaux des mesures soient captées par l'Arduino.
 
 ![Schéma du montage sur LtSpice](/Images/schema_ltspice.png)
@@ -121,7 +121,7 @@ Une photo démontrant que notre circuit permet une amplification efficace du sig
 
 </details>
 
-### 1.2. Connection diagram et KiCad
+#### 1.2. Connection diagram et KiCad
 Après le Wiring diagram, nous avons dessiné le diagramme des connexions afin de déterminer les connexions entre les broches des différents composants. Nous l'avons réalisé avec le logiciel KiCad car ce logiciel nous aiderait les étapes après.
 
 ![Schéma électronique réalisé sur KiCad](/Images/SchemaPCB.png)
@@ -141,7 +141,7 @@ L'objectif ici était d'allouer un branchement sur les entrées d'une carte Ardu
 
 L'ensemble des fichiers KiCad est disponible dans le dossier .[Shield_TP_Arduino](./Shield_TP_Arduino_par_KiCad).
 
-### 1.3. Résultat
+#### 1.3. Résultat
 L'image de 3D du PCB :
 
 ![Schéma du PCB 3D](/Images/PCB_3D.png)
@@ -154,12 +154,12 @@ Le PCB physique :
 
 Nous avons passé à la partie de software une fois celle de hardware est finie.
 
-### 2.1. Code Arduino
+#### 2.1. Code Arduino
 Le code Arduino permet de lire les valeurs du capteur en graphite, de gérer l'affichage d'un Menu sur l'écran OLED, la communication par Bluetooth avec l'application Android et le contrôle via l'encodeur rotatif.
 
 Le code Arduino est disponible dans le dossier .[programme_arduino](./programme_arduino).
 
-### 2.2. Application Android sur MIT App Inventor
+#### 2.2. Application Android sur MIT App Inventor
 Cette application permet de communiquer avec le système de mesure via Bluetooth et d’afficher les valeurs de résistance des capteurs.
 
 ![Application MIT](/Images/app_screenshot.png)
@@ -174,6 +174,8 @@ Les valeurs mesurées sont affichées sur le graphique au centre de l’écran. 
 ### 3. Banc de test
 Pour valider le fonctionnement du système, nous faisons évaluer les performances de notre capteur à travers un banc de test.
 
+#### 3.1. Principe
+
 Un modèle 3D composé de fentes circulaires de différents rayons est utilisé pour le banc de test. En insérant le capteur dans ces fentes, une déformation est induite en fonction de son orientation (traction ou compression). La déformation est inversement proportionnelle au rayon des fentes circulaires, selon la relation suivante : 
 ε = e / 2R
 
@@ -187,7 +189,7 @@ Ce système permet de contrôler précisément la déformation du capteur en cho
 ![model test](/Images/model_test_bench.jpg)
 
 <details>
-<summary>Explication physique derrière la capteur de graphite</summary>
+<summary><strong>Explication de la physique derrière la capteur à graphite</strong></summary>
 Lorsque le capteur est déformé, sa résistance varie naturellement. Ce phénomène s’explique principalement par les changements de distance entre les atomes de carbone qui le composent.
 
 En traction, les atomes s’éloignent les uns des autres. Les chemins conducteurs entre les deux extrémités du capteur deviennent alors moins nombreux et moins continus. Les électrons circulent donc plus difficilement, ce qui entraîne une augmentation de la résistance.
@@ -200,7 +202,7 @@ On observe également que la résistance diminue lorsque la dureté du crayon au
 
 </details>
   
-**Résultat des mesures**
+#### 3.2. Résultat des mesures
 
 Par la suite, nous avons caractérisé notre capteur en graphite afin de reproduire les résultats présentés dans l’étude mentionnée ci-dessus. La tension aux bornes du capteur est mesurée puis convertie en valeur de résistance. Cette résistance est ensuite tracée en fonction de la déformation appliquée.
 
@@ -213,26 +215,26 @@ Variation des résistances en fonction de déformation en mode compression
 ![Variation de resistance de compression](/Images/variation_resistance_compress.png)
 
 **Remarque**
-Le capteur en graphite n’est pas très fiable, car les valeurs de résistance changent beaucoup d’une mesure à l’autre, même quand on répète la même manipulation. Cela signifie que les résultats ne sont pas stables et qu’il est difficile de faire confiance aux mesures obtenues. Cette instabilité peut venir de plusieurs facteurs. Par exemple, le papier support peut se plier ou s’abîmer légèrement, et le dépôt de graphite peut se fissurer ou se déplacer. À l’intérieur du capteur, le courant passe grâce au contact entre de petites particules de graphite. Si ces contacts changent après chaque déformation, même un peu, la résistance peut varier fortement.
+Le capteur à graphite n’est pas très exacte, car les valeurs de résistance changent beaucoup d’une mesure à l’autre, même quand on répète la même manipulation. Cela signifie que les résultats ne sont pas stables et qu’il est difficile de faire confiance aux mesures obtenues. Cette instabilité peut venir de plusieurs facteurs. Par exemple, le papier support peut se plier ou s’abîmer légèrement; le dépôt de graphite peut se fissurer ou se déplacer; le capteur absorbe l'humidité de son environnement. À l’intérieur du capteur, le courant passe grâce au contact entre de petites particules de graphite. Si ces contacts changent après chaque déformation, même un peu, la résistance peut varier fortement.
 
-En comparaison, un capteur industriel comme un flex sensor est conçu pour être plus robuste. Sa structure interne est mieux contrôlée, ce qui permet d’obtenir des mesures plus stables et répétables. Les résultats changent donc beaucoup moins entre plusieurs essais, ce qui le rend plus fiable dans des applications pratiques.
+En comparaison, un capteur industriel comme un flex sensor est conçu pour être plus robuste. Sa structure interne est mieux contrôlée, ce qui permet d’obtenir des mesures plus stables et répétables. Les résultats changent donc beaucoup moins entre plusieurs essais, ce qui le rend plus fiable dans des applications pratiques. Cependant, si on ne concernait que les applicaitons qui ne requièrent pas des mesures exactes mais que une déformation, ce type de capteur à graphite est ainsi un bon outil. 
 
 ## Conclusion
 
-Dans ce travail, nous avons fabriqué un capteur de déformation en graphite sur du papier et étudié comment sa résistance change lorsqu’on le déforme.
+Dans ce travail, nous avons fabriqué un capteur de déformation en graphite sur les papiers et avons étudié comment sa résistance change lors des déformations.
 
 Les résultats montrent que la résistance varie bien avec la déformation, ce qui confirme le principe du capteur. Cependant, les valeurs mesurées ne sont pas stables et changent d’une mesure à l’autre. Cela est probablement dû à la structure du graphite, qui n’est pas uniforme, ainsi qu’à la qualité des contacts et au support en papier qui peut se déformer.
 
-Ainsi, même si ce capteur est simple et peu coûteux, il reste peu fiable dans sa forme actuelle. Il serait donc difficile de l’utiliser en industrie sans améliorer sa fabrication et sa stabilité.
+Ainsi, même si ce capteur est simple et peu coûteux, il reste peu exacte dans sa forme actuelle. Il serait donc difficile de l’utiliser en industrie pour les applications requises l'exactitude. Par contre, pour les applications de détection de déformation, il est bien adapté.
 
 ## Contacts
 Pour toutes les informations complémentaires: 
-### Étudiants réalisés
+### Étudiants réalisés :
 - NGUYEN Minh Khue : mngu@insa-toulouse.fr
 - VO Phuc Loc : pvo@insa-toulouse.fr
 - TRUONG Nguyen Gia Khanh : ntruong@insa-toulouse.fr
 
-### Enseignants
+### Enseignants :
 - Jérémie Grisolia : jeremie.grisolia@insa-toulouse.fr
 - Arnauld Biganzoli : arnauld.biganzoli@insa-toulouse.fr
 - Cathy Crouzet : crouzet@insa-toulouse.fr
