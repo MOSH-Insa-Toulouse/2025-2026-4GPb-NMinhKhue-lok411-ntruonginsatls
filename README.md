@@ -128,8 +128,7 @@ Après le Wiring diagram, nous avons dessiné le diagramme des connexions afin d
 
 ![Schéma électronique réalisé sur KiCad](/Images/SchemaPCB.png)
 
-.Pour ce faire......
-L'ensemble des fichiers KiCad est disponible dans le dossier .[Shield_TP_Arduino](./Shield_TP_Arduino).
+Nous vous expliquons les réalisations sur KiCad :
 
 - Réalisation des symboles et des empreints 
 Pour commencer notre PCB (Printed Circuit Board), il est nécessaire de créer les symboles et les empreintes des composants qui ne sont pas disponibles dans la bibliothèque de KiCad. Nous avons réalisé les symboles du module Bluetooth, de l'encodeur rotatif, de l'écran OLED, du capteur de flexion et du capteur en graphite, afin de les ajouter au schéma de connexion. Ensuite, ces symboles ont été associés à une empreinte trouvée sur des sites de libre téléchargement.
@@ -145,6 +144,8 @@ L'objectif ici était d'allouer un branchement sur les entrées d'une carte Ardu
 Image de 3D
 
 ![Schéma du PCB 3D](/Images/PCB_3D.png)
+
+L'ensemble des fichiers KiCad est disponible dans le dossier [Shield_TP_Arduino](./Shield_TP_Arduino).
 
 ### 5. Code Arduino
 
