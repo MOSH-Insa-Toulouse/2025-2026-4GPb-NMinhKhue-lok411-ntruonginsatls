@@ -1,5 +1,5 @@
 # Projet: Capteur Graphite à Crayon
-MOSH projet crée par les étudiant.e.s en 4eme année de Génie Physique: 
+MOSH projet crée par les étudiant.e.s en 4ème année de Génie Physique: 
 **NGUYEN Minh Khue, VO Phuc Loc, TRUONG Nguyen Gia Khanh**
 
 # Tableau de matière
@@ -229,7 +229,7 @@ Ainsi, même si ce capteur est simple et peu coûteux, il reste peu exacte dans 
 
 ## Contacts
 Pour toutes les informations complémentaires: 
-### Étudiants réalisés :
+### Étudiant.e.s réalisés :
 - NGUYEN Minh Khue : mngu@insa-toulouse.fr
 - VO Phuc Loc : pvo@insa-toulouse.fr
 - TRUONG Nguyen Gia Khanh : ntruong@insa-toulouse.fr
