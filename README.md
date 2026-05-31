@@ -141,7 +141,7 @@ Ensuite, le schéma électronique est à construire. Dans cette partie, les diff
 L'objectif ici était d'allouer un branchement sur les entrées d'une carte Arduino UNO à chaque module. Nous avons aussi pour but de faire le moins possible de via (pont traversant permettant de chavaucher un routage). Le circuit imprimé a été dessiné avec une attention particulière portée à la disposition des pistes pour minimiser les couplages parasites et faciliter le routage manuel.
 ![Schéma du PCB](/Images/PCB.png)
 
-L'ensemble des fichiers KiCad est disponible dans le dossier .[Shield_TP_Arduino](./Shield_TP_Arduino_par_KiCad).
+L'ensemble des fichiers KiCad est disponible dans le dossier [Shield TP Arduino par KiCad](Shield%20TP%20Arduino%20par%20KiCad).
 
 #### 1.3. Résultat
 L'image de 3D du PCB :
@@ -159,7 +159,7 @@ Nous avons passé à la partie de software une fois celle de hardware est finie.
 #### 2.1. Code Arduino
 Le code Arduino permet de lire les valeurs du capteur en graphite, de gérer l'affichage d'un Menu sur l'écran OLED, la communication par Bluetooth avec l'application Android et le contrôle via l'encodeur rotatif.
 
-Le code Arduino est disponible dans le dossier .[programme_arduino](./programme_arduino).
+Le code Arduino est disponible dans le dossier [Programme Arduino](Programme%20Arduino).
 
 #### 2.2. Application Android sur MIT App Inventor
 Cette application permet de communiquer avec le système de mesure via Bluetooth et d’afficher les valeurs de résistance des capteurs.
