@@ -4,16 +4,20 @@ MOSH projet crée par les étudiant.e.s en 4ème année de Génie Physique:
 
 # Tableau de matière
 - [Introduction](#introduction)
-  - [Objectif](#objectifs)
+  - [Objectifs](#1-objectifs)
+  - [Conception](#2-conception)
+  - [Matériels nécessaires](#2-matériel-necessaires)
   - [Livrables](#livrables)
 - [Réalisation du projet](#réalisation-du-projet)
-  - [Conception](#1-conception)
-  - [Matériels nécessaires](#2-matériel-necessaires)
-  - [Simulation LtSpice](#3-simulation-ltspice)
-  - [Réalisation du PCB](#4-réalisation-du-PCB)
-  - [Code Arduino](#5-code-arduino)
-  - [Application Android sur MIT App Inventor](#6-application-android-sur-mit-app-inventor)
+  - [Schémas](#3-simulation-ltspice)
+    - [Wiring diagram et Simulation LTspice]
+    - [Connection diagram et KiCad]
+  - [Software]
+    - [Code Arduino](#5-code-arduino)
+    - [Application Android sur MIT App Inventor](#6-application-android-sur-mit-app-inventor)
   - [Banc de test](#7-banc-de-test)
+    - Principe
+    - Résultats
 - [Conclusion](#conclusion)
 - [Contact](#contact)
    - [Étudiants](#étudiants)
