@@ -68,7 +68,7 @@ Plusieurs livrables sont contenus dans notre repositoire :
 ### 1. Schémas
 La réalisation doit tout d'abord commencer par des schémas électriques tels que le Wiring diagram et le Connection diagram.
 
-### a. Wiring diagram et Simulation LTspice
+### 1.1. Wiring diagram et Simulation LTspice
 Ce diagramme a pour but de savoir comment on peut connecter le capteur à l'Arduino afin que les signaux des mesures soient captées par l'Arduino.
 
 ![Schéma du montage sur LtSpice](/Images/schema_ltspice.png)
@@ -123,7 +123,7 @@ Une photo démontrant que notre circuit permet une amplification efficace du sig
 
 </details>
 
-### b. Connection diagram et KiCad
+### 1.2. Connection diagram et KiCad
 Après le Wiring diagram, nous avons dessiné le diagramme des connexions afin de déterminer les connexions entre les broches des différents composants. Nous l'avons réalisé avec le logiciel KiCad car ce logiciel nous aiderait les étapes après.
 
 ![Schéma électronique réalisé sur KiCad](/Images/SchemaPCB.png)
@@ -145,10 +145,13 @@ Image de 3D
 
 ![Schéma du PCB 3D](/Images/PCB_3D.png)
 
-L'ensemble des fichiers KiCad est disponible dans le dossier [Shield_TP_Arduino](./Shield_TP_Arduino).
+L'ensemble des fichiers KiCad est disponible dans le dossier [Shield_TP_Arduino](./Shield_TP_Arduino_par_KiCad).
 
-### 5. Code Arduino
+### 2. Software
 
+Nous avons fait le software une fois le hardware est fini
+
+### 2.1. Code Arduino
 Le code Arduino permet de lire les valeurs du capteur en graphite, de gérer l'affichage d'un Menu sur l'écran OLED, la communication par Bluetooth avec l'application Android et le contrôle via l'encodeur rotatif.
 
 Le code Arduino est disponible dans le dossier .[programme_arduino](./programme_arduino).
@@ -161,9 +164,8 @@ Cette application permet de communiquer avec le système de mesure via Bluetooth
 Lorsque la connexion Bluetooth est réussie, le bouton Connected devient vert, ce qui indique que la liaison est établie.
 
 L’application propose deux modes de mesure :
-
-Measure Graphite : mesure la résistance du capteur graphite ;
-Measure Flex Sensor : mesure la résistance du capteur flex en fonction du temps.
+- Measure Graphite : mesure la résistance du capteur graphite ;
+- Measure Flex Sensor : mesure la résistance du capteur flex en fonction du temps.
 Les valeurs mesurées sont affichées sur le graphique au centre de l’écran. À la fin de la mesure, les données sont regroupées, la valeur moyenne de la résistance est calculée, puis affichée en bas de l’interface.
 
 ### 7. Banc de test
